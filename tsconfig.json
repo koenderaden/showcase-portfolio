@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Root van het project
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["app/components/*"] // Alias voor components-map
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
