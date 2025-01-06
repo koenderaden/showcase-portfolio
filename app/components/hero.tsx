@@ -17,17 +17,17 @@ export default function Hero() {
       <div className="relative z-10 h-full flex flex-col justify-center">
         <div className="container mx-auto px-[60px]">
           {/* Bovenste tekst  */}
-          <p className="font-spartan text-4xl md:text-5xl font-semibold mb-0 text-left">
+          <p className="font-spartan text-3xl md:text-4xl font-semibold mb-0 text-left">
             Hi, my name is
           </p>
 
           {/* Naam */}
-          <h1 className="font-spartan text-7xl md:text-9xl font-bold mb-0 text-left">
+          <h1 className="font-spartan text-6xl md:text-9xl font-bold mb-0 text-left">
             Koen de Raden
           </h1>
 
           {/* Onderste tekst*/}
-          <p className="font-spartan text-4xl md:text-5xl font-semibold mt-1 text-left">
+          <p className="font-spartan text-3xl md:text-4xl font-semibold mt-1 text-left">
             ICT & Media Design Student
           </p>
         </div>
