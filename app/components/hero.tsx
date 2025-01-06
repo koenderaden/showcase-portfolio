@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="h-screen relative overflow-hidden">
       <Image
-        src="/imagekoen.JPG"
+        src="/imagekoen.png"
         alt="Hero background"
         fill
         className="object-cover"
