@@ -2,12 +2,60 @@ import Image from "next/image";
 
 export default function Gallery() {
   const projects = [
-    { id: 1, image: "/placeholder.svg?height=400&width=424", alt: "Project 1" },
-    { id: 2, image: "/placeholder.svg?height=400&width=424", alt: "Project 2" },
-    { id: 3, image: "/placeholder.svg?height=400&width=424", alt: "Project 3" },
-    { id: 4, image: "/placeholder.svg?height=400&width=424", alt: "Project 4" },
-    { id: 5, image: "/placeholder.svg?height=400&width=424", alt: "Project 5" },
-    { id: 6, image: "/placeholder.svg?height=400&width=424", alt: "Project 6" },
+    {
+      id: 1,
+      image: {
+        src: "/marketingloomgallery.png",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 1",
+    },
+    {
+      id: 2,
+      image: {
+        src: "/mcracegallery.png",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 2",
+    },
+    {
+      id: 3,
+      image: {
+        src: "/socceranimationgallery.png",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 3",
+    },
+    {
+      id: 4,
+      image: {
+        src: "/upendogallery.png",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 4",
+    },
+    {
+      id: 5,
+      image: {
+        src: "/placeholder.svg",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 5",
+    },
+    {
+      id: 6,
+      image: {
+        src: "/placeholder.svg",
+        height: 400,
+        width: 424,
+      },
+      alt: "Project 6",
+    },
   ];
 
   return (
@@ -18,12 +66,13 @@ export default function Gallery() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="relative w-[424px] h-[400px] rounded-lg overflow-hidden group"
+              className="relative w-[424px] h-[400px] rounded-lg overflow-hidden group border-[1px] border-white" // Border toegevoegd
             >
               <Image
-                src={project.image}
+                src={project.image.src}
                 alt={project.alt}
-                fill
+                width={project.image.width}
+                height={project.image.height}
                 className="object-cover transition-transform group-hover:scale-110"
               />
             </div>
