@@ -16,9 +16,9 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 bg-background-light">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-[60px]">
-        <div className="flex flex-col md:flex-row md:items-start">
+        <div className="flex flex-col md:flex-col md:items-center">
           <h2 className="text-4xl font-bold mb-12 md:mb-0 md:w-1/3">
             Let's create something amazing together!
           </h2>
@@ -37,7 +37,7 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="w-full px-3 py-2 text-text-primary bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -53,7 +53,7 @@ export default function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-3 py-2 text-text-primary bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
@@ -69,7 +69,7 @@ export default function Contact() {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                   rows={4}
-                  className="w-full px-3 py-2 text-text-primary bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 ></textarea>
               </div>
               <button

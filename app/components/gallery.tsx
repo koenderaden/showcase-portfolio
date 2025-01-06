@@ -59,10 +59,10 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="py-20 bg-background relative">
+    <section className="py-20 bg-background-light relative">
       <div className="container mx-auto px-[60px]">
         {/* Gallery title */}
-        <h2 className="font-spartan text-[4rem] font-semibold mb-12 text-text-primary">
+        <h2 className="font-spartan text-[36px] font-semibold mb-12 text-text-primary">
           Gallery
         </h2>
 
