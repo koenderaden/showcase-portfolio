@@ -17,6 +17,10 @@ module.exports = {
         "text-primary": "#ffffff",
         "text-secondary": "#a0aec0",
       },
+      fontFamily: {
+        spartan: ['"League Spartan"', "sans-serif"],
+        roboto: ['"Roboto"', "sans-serif"], 
+      },
     },
   },
   plugins: [],
