@@ -63,10 +63,11 @@ export default function Gallery() {
       <div className="container mx-auto px-[60px]">
         <h2 className="text-4xl font-bold mb-12">Gallery</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className="relative w-[424px] h-[400px] rounded-lg overflow-hidden group border-[1px] border-white" // Border toegevoegd
+              className="relative w-[424px] h-[400px] rounded-lg border-[1px] border-white"
+              style={{ overflow: "visible" }} // Maak overflow zichtbaar
             >
               <Image
                 src={project.image.src}
@@ -75,6 +76,38 @@ export default function Gallery() {
                 height={project.image.height}
                 className="object-cover transition-transform group-hover:scale-110"
               />
+
+              {/* SVG toevoegen op basis van index */}
+              {index === 2 && (
+                <div
+                  className="absolute"
+                  style={{
+                    top: "-50px", // Zorgt dat de SVG uitsteekt naar boven
+                    right: "-50px", // Zorgt dat de SVG uitsteekt naar rechts
+                  }}
+                >
+                  <img
+                    src="/starsright.svg"
+                    alt="Stars Right"
+                    className="w-100 h-100" // Pas grootte van de SVG aan
+                  />
+                </div>
+              )}
+              {index === 3 && (
+                <div
+                  className="absolute"
+                  style={{
+                    bottom: "-50px", // Zorgt dat de SVG uitsteekt naar onder
+                    left: "-50px", // Zorgt dat de SVG uitsteekt naar links
+                  }}
+                >
+                  <img
+                    src="/starsleft.svg"
+                    alt="Stars Left"
+                    className="w-100 h-100" // Pas grootte van de SVG aan
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
