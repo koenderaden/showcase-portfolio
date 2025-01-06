@@ -1,7 +1,6 @@
 import Hero from "../app/components/hero";
 import Gallery from "../app/components/gallery";
 import About from "../app/components/about";
-import Skills from "../app/components/skills";
 import Contact from "../app/components/contact";
 
 
@@ -11,7 +10,6 @@ export default function Home() {
       <Hero />
       <Gallery />
       <About />
-      <Skills />
       <Contact />
     </main>
   );
