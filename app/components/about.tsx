@@ -65,7 +65,7 @@ export default function About() {
 
           {/* Text Section */}
           <div
-            className="md:w-full text-[20px] font-roboto"
+            className="md:w-full text-[1rem] font-roboto"
             style={{ marginBottom: "6rem" }}
           >
             <p className="mb-6">
