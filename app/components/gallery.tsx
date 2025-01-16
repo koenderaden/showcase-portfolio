@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Gallery() {
   const projects = [
@@ -10,15 +11,17 @@ export default function Gallery() {
         width: 424,
       },
       alt: "Marketing Loom",
+      link: "/gallery/marketingloom", // ✅ Link toegevoegd
     },
     {
       id: 2,
       image: {
-        src: "/mcracegallery.png",
+        src: "/dansemacabreaudiotourgallery.png",
         height: 400,
         width: 424,
       },
-      alt: "MC Race",
+      alt: "Danse Macabre",
+      link: "/gallery/dmcaudiotour", // ✅ Link toegevoegd
     },
     {
       id: 3,
@@ -28,15 +31,16 @@ export default function Gallery() {
         width: 424,
       },
       alt: "Upendo",
+      link: "/gallery/upendo", // ✅ Link toegevoegd
     },
     {
       id: 4,
       image: {
-        src: "/dansemacabreaudiotourgallery.png",
+        src: "/mcracegallery.png",
         height: 400,
         width: 424,
       },
-      alt: "Danse Macabre",
+      alt: "MC Race",
     },
     {
       id: 5,
@@ -67,36 +71,47 @@ export default function Gallery() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className="relative group w-[424px] h-[400px] rounded-lg border-[1px] border-white overflow-hidden cursor-pointer"
-            >
-              {/* Image */}
-              <div className="w-full h-full overflow-hidden rounded-[15px]">
-                <Image
-                  src={project.image.src}
-                  alt={project.alt}
-                  width={project.image.width}
-                  height={project.image.height}
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
+          {projects.map((project) => {
+            const imageContent = (
+              <div
+                key={project.id}
+                className="relative group w-[424px] h-[400px] rounded-lg border-[1px] border-white overflow-hidden cursor-pointer"
+              >
+                {/* Image */}
+                <div className="w-full h-full overflow-hidden rounded-[15px]">
+                  <Image
+                    src={project.image.src}
+                    alt={project.alt}
+                    width={project.image.width}
+                    height={project.image.height}
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-[15px]">
-                <p className="font-spartan text-xl md:text-2xl font-semibold underline text-white">
-                  {project.alt}
-                </p>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-[15px]">
+                  <p className="font-spartan text-xl md:text-2xl font-semibold underline text-white">
+                    {project.alt}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+
+            // Controleer of er een link is. Als die er is, maak het klikbaar
+            return project.link ? (
+              <Link href={project.link} key={project.id}>
+                {imageContent}
+              </Link>
+            ) : (
+              imageContent
+            );
+          })}
 
           {/* Starsright */}
           <div
             className="absolute z-50 pointer-events-none"
             style={{
-              top: "calc(-133px + 100px)", // Positioneer boven project 3
+              top: "calc(-133px + 100px)",
               right: "-10px",
             }}
           >
@@ -111,7 +126,7 @@ export default function Gallery() {
           <div
             className="absolute z-50 pointer-events-none"
             style={{
-              top: "calc(600px + 200px)", // Positioneer boven project 4
+              top: "calc(600px + 200px)",
               left: "-33px",
             }}
           >
