@@ -18,10 +18,10 @@ export default function MarketingLoomPage() {
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
-            src="/marketingloomlogo.webp"
+            src="/marketingloomlogo.svg"
             alt="Marketing Loom Project Logo"
-            width={400}
-            height={400}
+            width={800}
+            height={800}
           />
         </div>
 
@@ -31,10 +31,39 @@ export default function MarketingLoomPage() {
             Introduction
           </h2>
           <p className="text-lg text-gray-300">
-            Discover the Marketing Loom Project, an innovative platform designed
-            to revolutionize digital marketing strategies through advanced
-            analytics and creative solutions.
+            The <strong>Marketing Loom Project</strong> was developed by our
+            team at <strong>2ManyDots</strong> to provide marketing
+            professionals, communication experts, and entrepreneurs with
+            up-to-date insights, trends, and developments in the marketing
+            industry. The platform delivers daily articles, in-depth analyses,
+            expert interviews, case studies, and market data. Users can
+            subscribe to newsletters and participate in webinars and events.
           </p>
+          <p className="text-lg text-gray-300 mt-4">
+            The website is designed to be fast, user-friendly, and visually
+            appealing while integrating interactive elements like an event
+            calendar, social media integration, and advertisement placements.
+            Built with <strong>Storyblok CMS</strong> and styled using{" "}
+            <strong>Tailwind CSS</strong>, Marketing Loom ensures seamless
+            content management and a modern, responsive design.
+          </p>
+        </section>
+
+        {/* Key Features */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Key Features
+          </h2>
+          <ul className="text-lg text-gray-300 list-disc list-inside">
+            <li>Daily articles, analyses, and expert interviews.</li>
+            <li>Interactive event calendar for webinars and events.</li>
+            <li>Newsletter subscriptions and social media integration.</li>
+            <li>Advertisement space for targeted marketing campaigns.</li>
+            <li>
+              Built with <strong>Storyblok CMS</strong> and styled using{" "}
+              <strong>Tailwind CSS</strong>.
+            </li>
+          </ul>
         </section>
 
         {/* Key Features */}

@@ -18,10 +18,10 @@ export default function UpendoPage() {
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
-            src="/upendologo.webp"
+            src="/upendologo.svg"
             alt="Upendo Project Logo"
-            width={400}
-            height={400}
+            width={800}
+            height={800}
           />
         </div>
 
@@ -31,19 +31,73 @@ export default function UpendoPage() {
             Introduction
           </h2>
           <p className="text-lg text-gray-300">
-            Learn more about the Upendo Project, a unique initiative aimed at
-            creating meaningful change and fostering innovation through
-            technology.
+            The <strong>Upendo Project</strong> was developed by our team at{" "}
+            <strong>2ManyDots</strong> to offer businesses clear and accessible
+            data-driven solutions. Upendo focuses on simplifying complex data
+            insights, setting it apart from traditional web development
+            services. Designed specifically for <strong>SMEs</strong> and{" "}
+            <strong>semi-government institutions</strong>, the platform provides
+            a seamless experience to make data-driven decision-making easier and
+            more effective. The website is fully developed in{" "}
+            <strong>English</strong> to cater to a broader audience.
           </p>
         </section>
 
-        {/* Objectives */}
+        {/* Our Mission */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-white mb-4">Objectives</h2>
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg text-gray-300">
+            Upendo offers a comprehensive suite of services designed to simplify
+            data handling and analysis for businesses.
+          </p>
           <ul className="text-lg text-gray-300 list-disc list-inside">
-            <li>Empower communities through technology.</li>
-            <li>Promote sustainable solutions for global challenges.</li>
-            <li>Encourage innovation and creativity in problem-solving.</li>
+            <li>
+              <strong>Configuration</strong> - Customizing data setups to meet
+              business needs.
+            </li>
+            <li>
+              <strong>Optimization</strong> - Enhancing data performance for
+              better efficiency.
+            </li>
+            <li>
+              <strong>Visualization</strong> - Creating clear, interactive data
+              displays.
+            </li>
+            <li>
+              <strong>Analysis</strong> - Providing detailed insights and data
+              interpretation.
+            </li>
+            <li>
+              <strong>Training</strong> - Educating teams on data tools and best
+              practices.
+            </li>
+          </ul>
+        </section>
+
+        {/* Technology Stack */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Technology Stack
+          </h2>
+          <p className="text-lg text-gray-300">
+            To support Upendo's functionality, we built a{" "}
+            <strong>responsive website</strong> using the{" "}
+            <strong>Storyblok CMS</strong>. This modern content management
+            system allows seamless page, content, and form management without
+            the need for traditional page builders.
+          </p>
+          <ul className="text-lg text-gray-300 list-disc list-inside">
+            <li>
+              Efficient <strong>training program management</strong>
+            </li>
+            <li>
+              Dynamic and flexible <strong>pricing tables</strong>
+            </li>
+            <li>
+              Integrated <strong>SEO optimization</strong> tools
+            </li>
           </ul>
         </section>
 
