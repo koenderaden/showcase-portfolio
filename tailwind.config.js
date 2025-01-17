@@ -19,9 +19,13 @@ module.exports = {
       },
       fontFamily: {
         spartan: ['"League Spartan"', "sans-serif"],
-        roboto: ['"Roboto"', "sans-serif"], 
+        roboto: ['"Roboto"', "sans-serif"],
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    // Smooth scrolling inschakelen
+    scrollBehavior: true,
+  },
 };
