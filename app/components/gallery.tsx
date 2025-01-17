@@ -75,7 +75,7 @@ export default function Gallery() {
             const imageContent = (
               <div
                 key={project.id}
-                className="relative group w-[424px] h-[400px] rounded-lg border-[1px] border-white overflow-hidden cursor-pointer"
+                className="relative group w-[424px] h-[400px] rounded-lg overflow-hidden cursor-pointer"
               >
                 {/* Image */}
                 <div className="w-full h-full overflow-hidden rounded-[15px]">
