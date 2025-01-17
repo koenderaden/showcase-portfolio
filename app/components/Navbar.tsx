@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -26,47 +27,42 @@ export default function Navbar() {
       <div className="container mx-auto px-[60px] py-4 flex justify-between items-center">
         {/* Naam links uitgelijnd */}
         <div>
-          <a
-            href="#hero"
-            className="font-spartan text-2xl font-bold text-white/90 hover:text-white transition-all duration-300"
-          >
-            koen de raden
-          </a>
+          <Link href="/" passHref>
+            <span className="font-spartan text-2xl font-bold text-white/90 hover:text-white transition-all duration-300 cursor-pointer">
+              koen de raden
+            </span>
+          </Link>
         </div>
 
         {/* Navigatielinks rechts uitgelijnd */}
         <ul className="flex space-x-8">
           <li>
-            <a
-              href="#gallery"
-              className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300"
-            >
-              Gallery
-            </a>
+            <Link href="/#gallery" passHref>
+              <span className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer">
+                Gallery
+              </span>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about-me"
-              className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300"
-            >
-              About Me
-            </a>
+            <Link href="/#about-me" passHref>
+              <span className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer">
+                About Me
+              </span>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about-me"
-              className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300"
-            >
-              My Skills
-            </a>
+            <Link href="/#about-me" passHref>
+              <span className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer">
+                My Skills
+              </span>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
-              className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300"
-            >
-              Contact
-            </a>
+            <Link href="/#contact" passHref>
+              <span className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer">
+                Contact
+              </span>
+            </Link>
           </li>
         </ul>
       </div>
