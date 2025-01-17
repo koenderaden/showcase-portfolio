@@ -1,87 +1,70 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 
-export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", { name, email, message });
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
+export default function Footer() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-[60px]">
-        <div className="flex flex-col md:flex-col md:items-center">
-          <h2 className="text-4xl font-bold mb-12 md:mb-0 md:w-1/3">
-            Let's create something amazing together!
-          </h2>
-          <div className="md:w-2/3">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
+    <footer className="py-12 px-[60px] bg-[#171717] text-white">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-4 font-spartan">Gallery</h3>
+            <ul className="space-y-2 font-roboto">
+              <li>
+                <Link
+                  href="/gallery/upendo"
+                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
                 >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  Upendo
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery/marketingloom"
+                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
                 >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
+                  MarketingLoom
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery/dmcaudiotour"
+                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
                 >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                  rows={4}
-                  className="w-full px-3 py-2 text-text-primary bg-background-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-primary text-text-primary py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+                  Danse Macabre Audio Tour
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-4 font-spartan">Contact</h3>
+            <div className="font-roboto">
+              <p className="mb-2">Email: contact@example.com</p>
+              <p className="mb-2">Phone: (123) 456-7890</p>
+              <p>Address: 123 Art Street, Creativity City, AC 12345</p>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold mb-4 font-spartan">About Me</h3>
+            <div className="font-roboto">
+              <p className="mb-4">
+                I'm a passionate photographer capturing the beauty of the world
+                through my lens. With over 10 years of experience, I specialize
+                in nature, urban, and abstract photography.
+              </p>
+              <Link
+                href="/about"
+                className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
               >
-                Send Message
-              </button>
-            </form>
+                Learn more about me
+              </Link>
+            </div>
           </div>
         </div>
+        <div className="mt-8 pt-8 border-t border-gray-700 text-center font-roboto">
+          <p>&copy; 2025 Your Photography. All rights reserved.</p>
+        </div>
       </div>
-    </section>
+    </footer>
   );
 }
