@@ -23,8 +23,19 @@ export default function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       } bg-black/30 backdrop-blur-sm`}
     >
-      <div className="container mx-auto px-[60px] py-4">
-        <ul className="flex justify-end space-x-8">
+      <div className="container mx-auto px-[60px] py-4 flex justify-between items-center">
+        {/* Naam links uitgelijnd */}
+        <div>
+          <a
+            href="#hero"
+            className="font-spartan text-2xl font-bold text-white/90 hover:text-white transition-all duration-300"
+          >
+            koen de raden
+          </a>
+        </div>
+
+        {/* Navigatielinks rechts uitgelijnd */}
+        <ul className="flex space-x-8">
           <li>
             <a
               href="#gallery"
