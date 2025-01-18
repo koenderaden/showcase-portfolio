@@ -10,7 +10,6 @@ export default function MarketingLoomPage() {
 
       {/* Main Content */}
       <main className="container mx-auto py-24 px-6 flex-grow">
-
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
@@ -77,23 +76,23 @@ export default function MarketingLoomPage() {
         {/* Explore More Button */}
         <div className="flex justify-center mb-24">
           <a
-            href="https://marketingloom.com"
+            href="https://marketingloom.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#667D77] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#556b63] transition-transform duration-300"
+            className="px-10 py-4 bg-[#E94560] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#E94560] transition-transform duration-300"
           >
-            🚀 Explore More
+            🌍 Live Demo
           </a>
         </div>
 
         {/* Timeline */}
         <div className="relative mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#667D77]"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#E94560]"></div>
 
           {/* Timeline Item 1 */}
           <div className="mb-24 flex items-center w-full group">
             <div className="w-1/2 pr-8 text-right">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#E94560] transition-all">
                 Concept Development
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
@@ -101,7 +100,7 @@ export default function MarketingLoomPage() {
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#667D77] rounded-full border-2 border-white"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#E94560] rounded-full border-2 border-white"></div>
               <Image
                 src="/concept.png"
                 alt="Concept Development"
@@ -115,7 +114,7 @@ export default function MarketingLoomPage() {
           {/* Timeline Item 2 */}
           <div className="mb-24 flex items-center w-full flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#E94560] transition-all">
                 Product Launch
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
@@ -123,7 +122,7 @@ export default function MarketingLoomPage() {
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#667D77] rounded-full border-2 border-white"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#E94560] rounded-full border-2 border-white"></div>
               <Image
                 src="/launch.png"
                 alt="Product Launch"
