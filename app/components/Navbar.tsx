@@ -29,7 +29,7 @@ export default function Navbar() {
         <div>
           <Link href="/" passHref>
             <span className="font-spartan text-2xl font-bold text-white/90 hover:text-white transition-all duration-300 cursor-pointer">
-              koen de raden
+              Koen de Raden
             </span>
           </Link>
         </div>
