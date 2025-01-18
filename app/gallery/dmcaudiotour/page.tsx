@@ -63,7 +63,7 @@ export default function DmcaudioTourPage() {
             rel="noopener noreferrer"
             className="px-10 py-4 bg-[#667D77] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#556b63] transition-transform duration-300"
           >
-            🎧 Start the Live Demo
+            🎧 Live Demo
           </a>
         </div>
 
