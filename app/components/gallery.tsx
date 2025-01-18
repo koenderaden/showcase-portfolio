@@ -11,7 +11,7 @@ export default function Gallery() {
         width: 424,
       },
       alt: "Marketing Loom",
-      link: "/gallery/marketingloom", // ✅ Link toegevoegd
+      link: "/gallery/marketingloom",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function Gallery() {
         width: 424,
       },
       alt: "Danse Macabre",
-      link: "/gallery/dmcaudiotour", // ✅ Link toegevoegd
+      link: "/gallery/dmcaudiotour",
     },
     {
       id: 3,
@@ -31,53 +31,36 @@ export default function Gallery() {
         width: 424,
       },
       alt: "Upendo",
-      link: "/gallery/upendo", // ✅ Link toegevoegd
+      link: "/gallery/upendo",
     },
     {
       id: 4,
-      image: {
-        src: "/mcracegallery.png",
-        height: 400,
-        width: 424,
-      },
-      alt: "MC Race",
+      content: "Under Maintenance",
     },
     {
       id: 5,
-      image: {
-        src: "/socceranimationgallery.png",
-        height: 400,
-        width: 424,
-      },
-      alt: "Soccer Animation",
+      content: "Under Maintenance",
     },
     {
       id: 6,
-      image: {
-        src: "/placeholder.svg",
-        height: 400,
-        width: 424,
-      },
-      alt: "Placeholder Project",
+      content: "Under Maintenance",
     },
   ];
 
   return (
     <section className="py-20 bg-background-light relative">
       <div className="container mx-auto px-[60px]">
-        {/* Gallery title */}
         <h2 className="font-spartan text-[36px] font-semibold mb-12 text-text-primary">
           Gallery
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
           {projects.map((project) => {
-            const imageContent = (
+            const imageContent = project.image ? (
               <div
                 key={project.id}
                 className="relative group w-[424px] h-[400px] rounded-lg overflow-hidden cursor-pointer"
               >
-                {/* Image */}
                 <div className="w-full h-full overflow-hidden rounded-[15px]">
                   <Image
                     src={project.image.src}
@@ -87,17 +70,23 @@ export default function Gallery() {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-[15px]">
-                  <p className="font-spartan text-xl md:text-2xl font-semibold underline text-white">
+                  <p className="font-spartan text-xl md:text-2xl font-semibold underline text-text-primary">
                     {project.alt}
                   </p>
                 </div>
               </div>
+            ) : (
+              <div
+                key={project.id}
+                className="relative group w-[424px] h-[400px] rounded-lg overflow-hidden cursor-pointer bg-[#171717] flex items-center justify-center"
+              >
+                <p className="font-spartan text-xl md:text-2xl font-semibold text-text-primary">
+                  {project.content}
+                </p>
+              </div>
             );
 
-            // Controleer of er een link is. Als die er is, maak het klikbaar
             return project.link ? (
               <Link href={project.link} key={project.id}>
                 {imageContent}
@@ -107,7 +96,6 @@ export default function Gallery() {
             );
           })}
 
-          {/* Starsright */}
           <div
             className="absolute z-50 pointer-events-none"
             style={{
@@ -122,7 +110,6 @@ export default function Gallery() {
             />
           </div>
 
-          {/* Starsleft */}
           <div
             className="absolute z-50 pointer-events-none"
             style={{
