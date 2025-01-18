@@ -20,7 +20,7 @@ export default function Gallery() {
         height: 400,
         width: 424,
       },
-      alt: "Danse Macabre",
+      alt: "Danse Macabre Audio Tour",
       link: "/gallery/dmcaudiotour",
     },
     {
@@ -71,7 +71,7 @@ export default function Gallery() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-[15px]">
-                  <p className="font-spartan text-xl md:text-2xl font-semibold underline text-text-primary">
+                  <p className="font-spartan text-xl md:text-2xl font-semibold text-white">
                     {project.alt}
                   </p>
                 </div>

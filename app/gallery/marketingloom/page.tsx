@@ -10,10 +10,6 @@ export default function MarketingLoomPage() {
 
       {/* Main Content */}
       <main className="container mx-auto py-24 px-6 flex-grow">
-        {/* Project Title */}
-        <h1 className="text-5xl font-extrabold mb-10 text-center text-white drop-shadow-lg">
-          Marketing Loom Project
-        </h1>
 
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
