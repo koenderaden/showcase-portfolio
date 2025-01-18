@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gallery/upendo"
-                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
+                  className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer"
                 >
                   Upendo
                 </Link>
@@ -21,7 +22,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gallery/marketingloom"
-                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
+                  className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer"
                 >
                   MarketingLoom
                 </Link>
@@ -29,7 +30,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gallery/dmcaudiotour"
-                  className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
+                  className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer"
                 >
                   Danse Macabre Audio Tour
                 </Link>
@@ -38,31 +39,74 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 font-spartan">Contact</h3>
-            <div className="font-roboto">
-              <p className="mb-2">Email: contact@example.com</p>
-              <p className="mb-2">Phone: (123) 456-7890</p>
-              <p>Address: 123 Art Street, Creativity City, AC 12345</p>
+            <div className="font-roboto space-y-2">
+              <div className="flex items-center">
+                <Image
+                  src="/svgs/mail-icon.svg"
+                  alt="Email Icon"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
+                <a
+                  href="mailto:koenderaden@gmail.com"
+                  className="hover:underline"
+                >
+                  koenderaden@gmail.com
+                </a>
+              </div>
+              <div className="flex  items-center">
+                <Image
+                  src="/svgs/phone-icon.svg"
+                  alt="Phone Icon"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
+                <a href="tel:+31682313234" className="hover:underline">
+                  +31 6 82313234
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Image
+                  src="/svgs/linkedin-icon.svg"
+                  alt="LinkedIn Icon"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
+                <a
+                  href="https://www.linkedin.com/in/koen-de-raden-b5a797320"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Koen de Raden
+                </a>
+              </div>
             </div>
           </div>
           <div>
             <h3 className="text-2xl font-bold mb-4 font-spartan">About Me</h3>
             <div className="font-roboto">
-              <p className="mb-4">
-                I'm a passionate photographer capturing the beauty of the world
-                through my lens. With over 10 years of experience, I specialize
-                in nature, urban, and abstract photography.
+              <p className="mb-4 text-sm">
+                I'm passionate about technology, creativity, and continuous
+                learning. With a strong interest in ICT and innovation, I am
+                always looking for opportunities to grow and develop new skills.
+                My goal is to turn ideas into impactful solutions and contribute
+                to a better digital world.
               </p>
-              <Link
-                href="/about"
-                className="font-spartan text-base text-white/80 hover:text-white hover:text-lg transition-all duration-300"
-              >
-                Learn more about me
+
+              <Link href="/#about-me" passHref>
+                <span className="font-spartan text-xl text-white/80 hover:text-white transition-all duration-300 cursor-pointer">
+                  Learn more about me
+                </span>
               </Link>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center font-roboto">
-          <p>&copy; 2025 Your Photography. All rights reserved.</p>
+          <p>&copy; 2025 Koen de Raden. All rights reserved.</p>
         </div>
       </div>
     </footer>
