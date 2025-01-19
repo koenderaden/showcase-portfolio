@@ -9,7 +9,7 @@ export default function UpendoPage() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="container mx-auto py-24 px-6 flex-grow">
+      <main className="container mx-auto px-[60px] py-24 flex-grow">
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
@@ -26,26 +26,53 @@ export default function UpendoPage() {
             Introduction
           </h2>
           <p className="text-lg text-gray-300">
-            The <strong>Upendo Project</strong> was developed by our team at{" "}
-            <strong>2ManyDots</strong> to offer businesses clear and accessible
-            data-driven solutions. Upendo focuses on simplifying complex data
-            insights, setting it apart from traditional web development
-            services. Designed specifically for <strong>SMEs</strong> and{" "}
-            <strong>semi-government institutions</strong>, the platform provides
+            The <strong>Upendo Project</strong> was developed by our team as a
+            dedicated project for <strong>2ManyDots</strong>. The goal was to
+            provide businesses with clear and accessible data-driven solutions.
+            Upendo focuses on simplifying complex data insights, setting it
+            apart from traditional web development services. Designed
+            specifically for <strong>SMEs</strong> and{" "}
+            <strong>semi-government institutions</strong>, the platform delivers
             a seamless experience to make data-driven decision-making easier and
             more effective. The website is fully developed in{" "}
             <strong>English</strong> to cater to a broader audience.
           </p>
         </section>
 
-        {/* Our Mission */}
+        {/* Given: Branding Elements and Sitemap */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-white mb-4">
-            Our Services
+            Given: Branding Elements and Sitemap
           </h2>
           <p className="text-lg text-gray-300">
-            Upendo offers a comprehensive suite of services designed to simplify
-            data handling and analysis for businesses.
+            At the start of the project, we were provided with key branding
+            elements and a structured sitemap by <strong>2ManyDots</strong>.
+            These materials ensured that the project aligned with their vision
+            and branding guidelines.
+          </p>
+          <ul className="text-lg text-gray-300 list-disc list-inside">
+            <li>
+              <strong>Branding Elements</strong> - Included color schemes,
+              typography, logos, and other design assets to ensure consistency
+              throughout the platform.
+            </li>
+            <li>
+              <strong>Sitemap</strong> - Provided a clear structure for
+              navigation and content hierarchy, ensuring an intuitive user
+              experience.
+            </li>
+          </ul>
+        </section>
+
+        {/* Our Services */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Services Provided
+          </h2>
+          <p className="text-lg text-gray-300">
+            As part of the project for 2ManyDots, we created a comprehensive
+            suite of features designed to simplify data handling and analysis
+            for their clients.
           </p>
           <ul className="text-lg text-gray-300 list-disc list-inside">
             <li>
@@ -77,8 +104,8 @@ export default function UpendoPage() {
             Technology Stack
           </h2>
           <p className="text-lg text-gray-300">
-            To support Upendo's functionality, we built a{" "}
-            <strong>responsive website</strong> using the{" "}
+            To ensure the Upendo platform met the requirements set by 2ManyDots,
+            our team built a <strong>responsive website</strong> using{" "}
             <strong>Storyblok CMS</strong>. This modern content management
             system allows seamless page, content, and form management without
             the need for traditional page builders.
@@ -102,7 +129,7 @@ export default function UpendoPage() {
             href="https://fontys-upendo.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#003A47] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#003A47] transition-transform duration-300"
+            className="px-10 py-4 bg-[#003A47] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#002626] transition-transform duration-300"
           >
             🌍 Live Demo
           </a>
@@ -115,19 +142,21 @@ export default function UpendoPage() {
           {/* Timeline Item 1 */}
           <div className="mb-24 flex items-center w-full group">
             <div className="w-1/2 pr-8 text-right">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#003A47] transition-all">
-                Project Launch
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
+                Web Design
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                The Upendo Project officially launched, introducing innovative
-                solutions for communities.
+                The Upendo Project’s design philosophy was crafted to align with
+                the needs of 2ManyDots and their clients. It centers on creating
+                a seamless and visually engaging user experience. Every aspect,
+                from layout to typography, was carefully tailored to provide
+                clarity, consistency, and ease of use for a broad audience.
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#003A47] rounded-full border-2 border-white"></div>
               <Image
-                src="/launch_upendo.png"
-                alt="Project Launch"
+                src="/upendoweb.png"
+                alt="Web Design Overview"
                 width={600}
                 height={400}
                 className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
@@ -138,23 +167,28 @@ export default function UpendoPage() {
           {/* Timeline Item 2 */}
           <div className="mb-24 flex items-center w-full flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#003A47] transition-all">
-                Community Impact
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
+                Optimized for Mobile
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                Positive changes and sustainable development in local
-                communities.
+                Our team implemented a mobile-first approach to ensure flawless
+                functionality across all devices. The platform offers quick load
+                times, responsive layouts, and intuitive navigation, meeting the
+                high standards expected by 2ManyDots and their clients.
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#003A47] rounded-full border-2 border-white"></div>
-              <Image
-                src="/impact.png"
-                alt="Community Impact"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="relative">
+                <Image
+                  src="/upendomobile.png"
+                  alt="Mobile Optimization Showcase"
+                  width={600}
+                  height={400}
+                  quality={100}
+                  unoptimized
+                  className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>
