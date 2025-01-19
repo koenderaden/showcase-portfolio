@@ -1,8 +1,24 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/contact";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function DmcaudioTourPage() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const openModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedImage("");
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-[#1A1A1A]">
       {/* Navbar */}
@@ -82,13 +98,13 @@ export default function DmcaudioTourPage() {
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <div className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-gradient-to-b from-[#667D77] to-[#082823] rounded-full border-2 border-white"></div>
               <Image
                 src="/imagekoen.png"
                 alt="Introduction"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/imagekoen.png")}
               />
             </div>
           </div>
@@ -104,18 +120,41 @@ export default function DmcaudioTourPage() {
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <div className="absolute -right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-gradient-to-b from-[#667D77] to-[#082823] rounded-full border-2 border-white"></div>
               <Image
                 src="/imagekoen.png"
                 alt="History"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/imagekoen.png")}
               />
             </div>
           </div>
         </div>
       </main>
+
+      {/* Fullscreen Modal */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-full max-h-full w-[90vw] h-[90vh]">
+            <Image
+              src={selectedImage}
+              alt="Fullscreen Image"
+              fill
+              className="object-contain rounded-lg"
+            />
+            <button
+              className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
+              onClick={closeModal}
+            >
+              ✖
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />
