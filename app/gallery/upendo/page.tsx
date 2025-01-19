@@ -1,8 +1,24 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/contact";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function UpendoPage() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const openModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedImage("");
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-[#1A1A1A]">
       {/* Navbar */}
@@ -98,31 +114,6 @@ export default function UpendoPage() {
           </ul>
         </section>
 
-        {/* Technology Stack */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-white mb-4">
-            Technology Stack
-          </h2>
-          <p className="text-lg text-gray-300">
-            To ensure the Upendo platform met the requirements set by 2ManyDots,
-            our team built a <strong>responsive website</strong> using{" "}
-            <strong>Storyblok CMS</strong>. This modern content management
-            system allows seamless page, content, and form management without
-            the need for traditional page builders.
-          </p>
-          <ul className="text-lg text-gray-300 list-disc list-inside">
-            <li>
-              Efficient <strong>training program management</strong>
-            </li>
-            <li>
-              Dynamic and flexible <strong>pricing tables</strong>
-            </li>
-            <li>
-              Integrated <strong>SEO optimization</strong> tools
-            </li>
-          </ul>
-        </section>
-
         {/* Learn More Button */}
         <div className="flex justify-center mb-24">
           <a
@@ -143,7 +134,7 @@ export default function UpendoPage() {
           <div className="mb-24 flex items-center w-full group">
             <div className="w-1/2 pr-8 text-right">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
-                Web Design
+                Web Design (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 The Upendo Project’s design philosophy was crafted to align with
@@ -159,7 +150,8 @@ export default function UpendoPage() {
                 alt="Web Design Overview"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/upendoweb.png")}
               />
             </div>
           </div>
@@ -168,7 +160,7 @@ export default function UpendoPage() {
           <div className="mb-24 flex items-center w-full flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
-                Optimized for Mobile
+                Optimized for Mobile (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 Our team implemented a mobile-first approach to ensure flawless
@@ -178,21 +170,41 @@ export default function UpendoPage() {
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <div className="relative">
-                <Image
-                  src="/upendomobile.png"
-                  alt="Mobile Optimization Showcase"
-                  width={600}
-                  height={400}
-                  quality={100}
-                  unoptimized
-                  className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+              <Image
+                src="/upendomobile.png"
+                alt="Mobile Optimization Showcase"
+                width={600}
+                height={400}
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/upendomobile.png")}
+              />
             </div>
           </div>
         </div>
       </main>
+
+      {/* Fullscreen Modal */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div className="relative max-w-full max-h-full w-[90vw] h-[90vh]">
+            <Image
+              src={selectedImage}
+              alt="Fullscreen Image"
+              fill
+              className="object-contain rounded-lg"
+            />
+            <button
+              className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
+              onClick={closeModal}
+            >
+              ✖
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />
