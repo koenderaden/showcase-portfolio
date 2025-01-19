@@ -6,12 +6,12 @@ export default function Gallery() {
     {
       id: 1,
       image: {
-        src: "/marketingloomgallery.png",
+        src: "/upendogallery.png",
         height: 400,
         width: 424,
       },
-      alt: "Marketing Loom",
-      link: "/gallery/marketingloom",
+      alt: "Upendo",
+      link: "/gallery/upendo",
     },
     {
       id: 2,
@@ -26,12 +26,12 @@ export default function Gallery() {
     {
       id: 3,
       image: {
-        src: "/upendogallery.png",
+        src: "/marketingloomgallery.png",
         height: 400,
         width: 424,
       },
-      alt: "Upendo",
-      link: "/gallery/upendo",
+      alt: "Marketing Loom",
+      link: "/gallery/marketingloom",
     },
     {
       id: 4,
