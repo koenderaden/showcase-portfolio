@@ -9,7 +9,7 @@ export default function DmcaudioTourPage() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="container mx-auto py-24 px-6 flex-grow">
+      <main className="container mx-auto py-24 px-[60px] flex-grow">
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
