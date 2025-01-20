@@ -3,7 +3,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/contact";
 import Image from "next/image";
+import Slider from "react-slick";
 import { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function MarketingLoomPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +21,33 @@ export default function MarketingLoomPage() {
     setIsOpen(false);
     setSelectedImage("");
   };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  };
+
+  const timelineImagesWebDesign = [
+    { src: "/marketingloomwebhome.png", alt: "Web Design Image 1" },
+    { src: "/marketingloomwebinloggen.png", alt: "Web Design Image 2" },
+    { src: "/marketingloomwebnieuws.png", alt: "Web Design Image 3" },
+    { src: "/marketingloomwebartikelen.png", alt: "Web Design Image 4" },
+    { src: "/marketingloomwebartikel.png", alt: "Web Design Image 5" },
+    { src: "/marketingloomwebinterviews.png", alt: "Web Design Image 6" },
+    { src: "/marketingloomwebevenementenwebinars.png", alt: "Web Design Image 7" },
+    { src: "/marketinloomwebinterviewartikel.png", alt: "Web Design Image 8" },
+  ];
+
+  const timelineImagesMobileDesign = [
+    { src: "/marketingloommobile1.png", alt: "Mobile Design Image 1" },
+    { src: "/marketingloommobile2.png", alt: "Mobile Design Image 2" },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-[#1A1A1A]">
@@ -108,14 +138,20 @@ export default function MarketingLoomPage() {
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <Image
-                src="/marketingloomweb.png"
-                alt="Web Design"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/marketingloomweb.png")}
-              />
+              <Slider {...sliderSettings}>
+                {timelineImagesWebDesign.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={600}
+                      height={400}
+                      className="rounded-xl shadow-xl cursor-pointer"
+                      onClick={() => openModal(image.src)}
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
 
@@ -133,14 +169,20 @@ export default function MarketingLoomPage() {
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <Image
-                src="/marketingloommobile.png"
-                alt="Optimized for Mobile"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/marketingloommobile.png")}
-              />
+              <Slider {...sliderSettings}>
+                {timelineImagesMobileDesign.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={600}
+                      height={400}
+                      className="rounded-xl shadow-xl cursor-pointer"
+                      onClick={() => openModal(image.src)}
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </div>
@@ -157,7 +199,7 @@ export default function MarketingLoomPage() {
               src={selectedImage}
               alt="Fullscreen Image"
               className="rounded-lg object-contain"
-              fill // Zorgt dat de afbeelding binnen de container wordt geschaald
+              fill
             />
             <button
               className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"

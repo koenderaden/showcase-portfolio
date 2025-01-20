@@ -3,7 +3,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/contact";
 import Image from "next/image";
+import Slider from "react-slick";
 import { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function UpendoPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +22,39 @@ export default function UpendoPage() {
     setSelectedImage("");
   };
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  };
+
+  const timelineImagesWebDesign = [
+    { src: "/upendowebhome.png", alt: "Web Design Image 1" },
+    { src: "/upendowebabout.png", alt: "Web Design Image 2" },
+    { src: "/upendowebservice.png", alt: "Web Design Image 3" },
+    { src: "/upendowebpricing.png", alt: "Web Design Image 4" },
+    { src: "/upendowebtraining.png", alt: "Web Design Image 5" },
+    { src: "/upendowebschedule.png", alt: "Web Design Image 6" },
+  ];
+
+  const timelineImagesMobileDesign = [
+    { src: "/upendomobile1.png", alt: "Mobile Design Image 1" },
+    { src: "/upendomobile2.png", alt: "Mobile Design Image 2" },
+    { src: "/upendomobile3.png", alt: "Mobile Design Image 3" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-[#1A1A1A]">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="container mx-auto px-[60px] py-24 flex-grow">
+      <main className="container mx-auto py-24 px-[60px] flex-grow">
         {/* Project Logo */}
         <div className="flex justify-center mb-16">
           <Image
@@ -35,7 +64,6 @@ export default function UpendoPage() {
             height={800}
           />
         </div>
-
         {/* Introduction */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-white mb-4">
@@ -54,8 +82,7 @@ export default function UpendoPage() {
             <strong>English</strong> to cater to a broader audience.
           </p>
         </section>
-
-        {/* Given: Branding Elements and Sitemap */}
+        {/* Branding Elements and Sitemap */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-white mb-4">
             Given: Branding Elements and Sitemap
@@ -79,8 +106,7 @@ export default function UpendoPage() {
             </li>
           </ul>
         </section>
-
-        {/* Our Services */}
+        {/* Services Provided */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-white mb-4">
             Services Provided
@@ -113,71 +139,78 @@ export default function UpendoPage() {
             </li>
           </ul>
         </section>
-
-        {/* Learn More Button */}
+        {/* Explore More Button */}
         <div className="flex justify-center mb-24">
           <a
-            href="https://fontys-upendo.vercel.app/"
+            href="https://marketingloom.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#003A47] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#002626] transition-transform duration-300"
+            className="px-10 py-4 bg-[#002626] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#003A47] transition-transform duration-300"
           >
             🌍 Live Demo
           </a>
         </div>
-
         {/* Timeline */}
         <div className="relative mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#003A47]"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#A8FF1A]"></div>
 
-          {/* Timeline Item 1 */}
+          {/* Timeline Item 1: Web Design */}
           <div className="mb-24 flex items-center w-full group">
             <div className="w-1/2 pr-8 text-right">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#A8FF1A] transition-all">
                 Web Design (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 The Upendo Project’s design philosophy was crafted to align with
                 the needs of 2ManyDots and their clients. It centers on creating
-                a seamless and visually engaging user experience. Every aspect,
-                from layout to typography, was carefully tailored to provide
-                clarity, consistency, and ease of use for a broad audience.
+                a seamless and visually engaging user experience.
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <Image
-                src="/upendoweb.png"
-                alt="Web Design Overview"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/upendoweb.png")}
-              />
+              <Slider {...sliderSettings}>
+                {timelineImagesWebDesign.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={600}
+                      height={400}
+                      className="rounded-xl shadow-xl cursor-pointer"
+                      onClick={() => openModal(image.src)}
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
 
-          {/* Timeline Item 2 */}
+          {/* Timeline Item 2: Optimized for Mobile */}
           <div className="mb-24 flex items-center w-full flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
-              <h3 className="text-3xl font-semibold text-white group-hover:text-[#F4C5FF] transition-all">
+              <h3 className="text-3xl font-semibold text-white group-hover:text-[#A8FF1A] transition-all">
                 Optimized for Mobile (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 Our team implemented a mobile-first approach to ensure flawless
                 functionality across all devices. The platform offers quick load
-                times, responsive layouts, and intuitive navigation, meeting the
-                high standards expected by 2ManyDots and their clients.
+                times, responsive layouts, and intuitive navigation.
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <Image
-                src="/upendomobile.png"
-                alt="Mobile Optimization Showcase"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/upendomobile.png")}
-              />
+              <Slider {...sliderSettings}>
+                {timelineImagesMobileDesign.map((image, index) => (
+                  <div key={index}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={600}
+                      height={400}
+                      className="rounded-xl shadow-xl cursor-pointer"
+                      onClick={() => openModal(image.src)}
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </div>
@@ -189,12 +222,12 @@ export default function UpendoPage() {
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
           onClick={closeModal}
         >
-          <div className="relative max-w-full max-h-full w-[90vw] h-[90vh]">
+          <div className="relative w-[90vw] h-[90vh] flex items-center justify-center">
             <Image
               src={selectedImage}
               alt="Fullscreen Image"
+              className="rounded-lg object-contain"
               fill
-              className="object-contain rounded-lg"
             />
             <button
               className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
