@@ -34,18 +34,18 @@ export default function UpendoPage() {
   };
 
   const timelineImagesWebDesign = [
-    { src: "/upendowebhome.png", alt: "Web Design Image 1" },
-    { src: "/upendowebabout.png", alt: "Web Design Image 2" },
-    { src: "/upendowebservice.png", alt: "Web Design Image 3" },
-    { src: "/upendowebpricing.png", alt: "Web Design Image 4" },
-    { src: "/upendowebtraining.png", alt: "Web Design Image 5" },
-    { src: "/upendowebschedule.png", alt: "Web Design Image 6" },
+    { src: "/upendoweb/upendowebhome.png", alt: "Web Design Image 1" },
+    { src: "/upendoweb/upendowebabout.png", alt: "Web Design Image 2" },
+    { src: "/upendoweb/upendowebservice.png", alt: "Web Design Image 3" },
+    { src: "/upendoweb/upendowebpricing.png", alt: "Web Design Image 4" },
+    { src: "/upendoweb/upendowebtraining.png", alt: "Web Design Image 5" },
+    { src: "/upendoweb/upendowebschedule.png", alt: "Web Design Image 6" },
   ];
 
   const timelineImagesMobileDesign = [
-    { src: "/upendomobile1.png", alt: "Mobile Design Image 1" },
-    { src: "/upendomobile2.png", alt: "Mobile Design Image 2" },
-    { src: "/upendomobile3.png", alt: "Mobile Design Image 3" },
+    { src: "/upendomobile/upendomobile1.png", alt: "Mobile Design Image 1" },
+    { src: "/upendomobile/upendomobile2.png", alt: "Mobile Design Image 2" },
+    { src: "/upendomobile/upendomobile3.png", alt: "Mobile Design Image 3" },
   ];
 
   return (
@@ -139,6 +139,7 @@ export default function UpendoPage() {
             </li>
           </ul>
         </section>
+
         {/* Explore More Button */}
         <div className="flex justify-center mb-24">
           <a

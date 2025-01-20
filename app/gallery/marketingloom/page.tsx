@@ -34,19 +34,49 @@ export default function MarketingLoomPage() {
   };
 
   const timelineImagesWebDesign = [
-    { src: "/marketingloomwebhome.png", alt: "Web Design Image 1" },
-    { src: "/marketingloomwebinloggen.png", alt: "Web Design Image 2" },
-    { src: "/marketingloomwebnieuws.png", alt: "Web Design Image 3" },
-    { src: "/marketingloomwebartikelen.png", alt: "Web Design Image 4" },
-    { src: "/marketingloomwebartikel.png", alt: "Web Design Image 5" },
-    { src: "/marketingloomwebinterviews.png", alt: "Web Design Image 6" },
-    { src: "/marketingloomwebevenementenwebinars.png", alt: "Web Design Image 7" },
-    { src: "/marketinloomwebinterviewartikel.png", alt: "Web Design Image 8" },
+    {
+      src: "/marketingloomweb/marketingloomwebhome.png",
+      alt: "Web Design Image 1",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebinloggen.png",
+      alt: "Web Design Image 2",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebnieuws.png",
+      alt: "Web Design Image 3",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebartikelen.png",
+      alt: "Web Design Image 4",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebartikel.png",
+      alt: "Web Design Image 5",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebinterviews.png",
+      alt: "Web Design Image 6",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebevenementenwebinars.png",
+      alt: "Web Design Image 7",
+    },
+    {
+      src: "/marketingloomweb/marketingloomwebinterviewartikel.png",
+      alt: "Web Design Image 8",
+    },
   ];
 
   const timelineImagesMobileDesign = [
-    { src: "/marketingloommobile1.png", alt: "Mobile Design Image 1" },
-    { src: "/marketingloommobile2.png", alt: "Mobile Design Image 2" },
+    {
+      src: "/marketingloommobile/marketingloommobile1.png",
+      alt: "Mobile Design Image 1",
+    },
+    {
+      src: "/marketingloommobile/marketingloommobile2.png",
+      alt: "Mobile Design Image 2",
+    },
   ];
 
   return (
