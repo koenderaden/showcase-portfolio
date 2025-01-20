@@ -1,8 +1,24 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/contact";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function MarketingLoomPage() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const openModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedImage("");
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-[#1A1A1A]">
       {/* Navbar */}
@@ -27,12 +43,13 @@ export default function MarketingLoomPage() {
           </h2>
           <p className="text-lg text-gray-300">
             The <strong>Marketing Loom Project</strong> was developed by our
-            team at <strong>2ManyDots</strong> to provide marketing
-            professionals, communication experts, and entrepreneurs with
-            up-to-date insights, trends, and developments in the marketing
-            industry. The platform delivers daily articles, in-depth analyses,
-            expert interviews, case studies, and market data. Users can
-            subscribe to newsletters and participate in webinars and events.
+            team as a school project for <strong>2ManyDots</strong>. The goal
+            was to provide marketing professionals, communication experts, and
+            entrepreneurs with up-to-date insights, trends, and developments in
+            the marketing industry. The platform delivers daily articles,
+            in-depth analyses, expert interviews, case studies, and market data.
+            Users can subscribe to newsletters and participate in webinars and
+            events.
           </p>
           <p className="text-lg text-gray-300 mt-4">
             The website is designed to be fast, user-friendly, and visually
@@ -61,18 +78,6 @@ export default function MarketingLoomPage() {
           </ul>
         </section>
 
-        {/* Key Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-white mb-4">
-            Key Features
-          </h2>
-          <ul className="text-lg text-gray-300 list-disc list-inside">
-            <li>Data-driven marketing strategies.</li>
-            <li>Innovative content creation tools.</li>
-            <li>Comprehensive performance analytics.</li>
-          </ul>
-        </section>
-
         {/* Explore More Button */}
         <div className="flex justify-center mb-24">
           <a
@@ -89,51 +94,80 @@ export default function MarketingLoomPage() {
         <div className="relative mx-auto">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#E94560]"></div>
 
-          {/* Timeline Item 1 */}
+          {/* Timeline Item 1: Web Design */}
           <div className="mb-24 flex items-center w-full group">
             <div className="w-1/2 pr-8 text-right">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#E94560] transition-all">
-                Concept Development
+                Web Design (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                Initial ideas and market research for Marketing Loom.
+                The Marketing Loom platform was crafted with a user-centered
+                design approach. The focus was on creating a modern, visually
+                engaging, and accessible interface that ensures users can easily
+                navigate through articles, events, and tools.
               </p>
             </div>
             <div className="relative w-1/2 pl-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#E94560] rounded-full border-2 border-white"></div>
               <Image
-                src="/concept.png"
-                alt="Concept Development"
+                src="/marketingloomweb.png"
+                alt="Web Design"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/marketingloomweb.png")}
               />
             </div>
           </div>
 
-          {/* Timeline Item 2 */}
+          {/* Timeline Item 2: Optimized for Mobile */}
           <div className="mb-24 flex items-center w-full flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#E94560] transition-all">
-                Product Launch
+                Optimized for Mobile (Click on image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                Launching the first version of the Marketing Loom platform.
+                Designed with a mobile-first approach, the platform ensures
+                seamless performance and usability on all devices. From
+                responsive layouts to fast load times, Marketing Loom delivers
+                an intuitive experience for users on the go.
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-[#E94560] rounded-full border-2 border-white"></div>
               <Image
-                src="/launch.png"
-                alt="Product Launch"
+                src="/marketingloommobile.png"
+                alt="Optimized for Mobile"
                 width={600}
                 height={400}
-                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onClick={() => openModal("/marketingloommobile.png")}
               />
             </div>
           </div>
         </div>
       </main>
+
+      {/* Fullscreen Modal */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div className="relative w-[90vw] h-[90vh] flex items-center justify-center">
+            <Image
+              src={selectedImage}
+              alt="Fullscreen Image"
+              className="rounded-lg object-contain"
+              fill // Zorgt dat de afbeelding binnen de container wordt geschaald
+            />
+            <button
+              className="absolute top-4 right-4 text-white text-2xl bg-black bg-opacity-50 p-2 rounded-full"
+              onClick={closeModal}
+            >
+              ✖
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer />
