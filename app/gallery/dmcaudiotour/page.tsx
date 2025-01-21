@@ -59,36 +59,83 @@ export default function DmcaudioTourPage() {
           </p>
         </section>
 
-        {/* Requirements */}
+        {/* App Availability */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold text-white mb-4">
-            Requirements
+            App Availability
           </h2>
-          <ul className="text-lg text-gray-300 list-disc list-inside">
-            <li>Stable internet connection for the audio experience.</li>
-            <li>Headphones for the best sound quality.</li>
-            <li>Smartphone or tablet for easy access.</li>
-          </ul>
+          <p className="text-lg text-gray-300">
+            To make the app easily accessible, I deployed it using Appflow,
+            which allows users to download the app directly (currently available
+            only for Android). For those without Android devices, the app can
+            also be viewed and tested on Appetize.io. This ensures that all
+            visitors can enjoy the app regardless of their platform.
+          </p>
+        </section>
+
+        {/* QR Code Integration */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            QR Code Integration
+          </h2>
+          <p className="text-lg text-gray-300">
+            To enhance accessibility and add a thematic element, I created a QR
+            code that I plan to display on themed signboards throughout the
+            queue. Visitors will be able to easily access the audio tour by
+            scanning the QR code with their smartphones, making the experience
+            both convenient and immersive.
+          </p>
         </section>
 
         {/* Live Demo Button */}
-        <div className="flex justify-center mb-24">
+        <div className="flex justify-center items-center gap-8 mb-24">
+          {/* Live Demo Knop */}
           <a
-            href="https://demo-website.com"
+            href="https://appetize.io/app/b_shhatdzanykrvdlryt67kfv4ri"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-4 bg-[#667D77] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#556b63] transition-transform duration-300"
+            className="px-10 py-4 bg-[#667D77] text-white flex justify-center text-center text-lg font-bold rounded-lg shadow-lg hover:bg-[#556b63] transition-transform duration-300"
           >
-            🎧 Live Demo
+            🎧 Live Demo 🎧
+            <br />
+            (Appetize.io)
           </a>
+          <div className="relative w-48 h-48 shadow-lg cursor-pointer">
+            {/* QR-code afbeelding */}
+            <img
+              src="/dmcaudiotour/dmcqr.png"
+              alt="QR Code for Live Demo"
+              className="w-full h-full object-cover"
+              onClick={() => openModal("/dmcaudiotour/dmcqr.png")}
+            />
+            {/* Overlay met tekst */}
+            <div
+              className="absolute inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center text-white font-bold text-lg hover:bg-opacity-50 transition-all text-center"
+              onClick={() => openModal("/dmcaudiotour/dmcqr.png")}
+            >
+              <div>
+                Click on Me
+                <br />
+                (Then Scan Me)
+              </div>
+
+              {/* Android-logo onder de tekst */}
+              <img
+                src="/androidlogo.png"
+                alt="Android Logo"
+                className="w-20 h-20 mt-4"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Enhanced Timeline */}
         <div className="relative mx-auto">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#667D77] to-[#082823] opacity-70"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#667D77] opacity-70"></div>
 
           {/* Timeline Item 1 */}
           <div className="mb-24 flex items-center w-full group">
+            {/* Linkerkant: Tekst */}
             <div className="w-1/2 pr-8 text-right">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
                 Design
@@ -97,14 +144,18 @@ export default function DmcaudioTourPage() {
                 An introduction to the Danse Macabre Audio Tour.
               </p>
             </div>
-            <div className="relative w-1/2 pl-8">
+
+            {/* Rechterkant: Afbeelding gecentreerd */}
+            <div className="relative w-1/2 pl-8 flex items-center justify-center">
               <Image
-                src="/imagekoen.png"
+                src="/dmcaudiotour/dmcaudiotourmobile1.png"
                 alt="Introduction"
-                width={600}
-                height={400}
+                width={200}
+                height={200}
                 className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/imagekoen.png")}
+                onClick={() =>
+                  openModal("/dmcaudiotour/dmcaudiotourmobile1.png")
+                }
               />
             </div>
           </div>
