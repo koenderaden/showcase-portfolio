@@ -84,6 +84,23 @@ export default function Footer() {
                   Koen de Raden
                 </a>
               </div>
+              <div className="flex items-center">
+                <Image
+                  src="/svgs/github-bw.svg"
+                  alt="GitHub Icon"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
+                <a
+                  href="https://github.com/koenderaden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  koenderaden
+                </a>
+              </div>
             </div>
           </div>
           <div>
