@@ -91,7 +91,7 @@ export default function MarketingLoomPage() {
           <Image
             src="/marketingloomlogo.svg"
             alt="Marketing Loom Project Logo"
-            width={800}
+            width={600}
             height={800}
           />
         </div>

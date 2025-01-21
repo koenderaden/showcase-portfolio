@@ -138,10 +138,14 @@ export default function DmcaudioTourPage() {
             {/* Linkerkant: Tekst */}
             <div className="w-1/2 pr-8 text-right">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
-                Design
+                WebDesign
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                An introduction to the Danse Macabre Audio Tour.
+                I designed the Danse Macabre Audio Tour app to reflect the eerie
+                and enchanting atmosphere of the attraction. The design blends
+                dark, gothic elements with user-friendly navigation, creating an
+                immersive digital experience that complements the storytelling
+                and theme of the tour.
               </p>
             </div>
 
@@ -161,23 +165,35 @@ export default function DmcaudioTourPage() {
           </div>
 
           {/* Timeline Item 2 */}
-          <div className="mb-24 flex items-center w-full flex-row-reverse group">
+          <div className="mb-24 flex items-center w-full  justify-center flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
-                The App
+                App Availability
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
-                Discover the historical background of the Danse Macabre.
+                The Danse Macabre Audio Tour app is available for Android via a
+                QR code generated through Appflow, allowing you to download and
+                experience the app seamlessly.
+              </p>
+              <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
+                Unfortunately, due to not having access to a MacBook or an iOS
+                certificate, I cannot publish the app to the iOS App Store. To
+                make it accessible, the app is hosted on the cloud-based
+                emulator <strong>Appetize.io</strong>, where you can run the app
+                directly on your browser.
+              </p>
+              <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
+                Try the app on Appetize.io using the green button above.
               </p>
             </div>
             <div className="relative w-1/2 pr-8">
               <Image
-                src="/imagekoen.png"
+                src="/dmcaudiotour/dmcqr.png"
                 alt="History"
-                width={600}
+                width={400}
                 height={400}
                 className="rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-500 cursor-pointer"
-                onClick={() => openModal("/imagekoen.png")}
+                onClick={() => openModal("/dmcaudiotour/dmcqr.png")}
               />
             </div>
           </div>
