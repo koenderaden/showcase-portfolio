@@ -143,7 +143,7 @@ export default function UpendoPage() {
         {/* Explore More Button */}
         <div className="flex justify-center mb-24">
           <a
-            href="https://marketingloom.vercel.app/"
+            href="https://fontys-upendo.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-[#002626] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#003A47] transition-transform duration-300"
