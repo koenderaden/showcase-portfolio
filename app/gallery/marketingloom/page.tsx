@@ -174,7 +174,7 @@ export default function MarketingLoomPage() {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={600}
+                      width={800}
                       height={400}
                       className="rounded-xl shadow-xl cursor-pointer"
                       onClick={() => openModal(image.src)}
@@ -205,7 +205,7 @@ export default function MarketingLoomPage() {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={600}
+                      width={800}
                       height={400}
                       className="rounded-xl shadow-xl cursor-pointer"
                       onClick={() => openModal(image.src)}

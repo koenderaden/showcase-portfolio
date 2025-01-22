@@ -138,7 +138,7 @@ export default function DmcaudioTourPage() {
             {/* Linkerkant: Tekst */}
             <div className="w-1/2 pr-8 text-right">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
-                WebDesign
+                WebDesign (Click on Image for better view)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 I designed the Danse Macabre Audio Tour app to reflect the eerie
@@ -168,7 +168,7 @@ export default function DmcaudioTourPage() {
           <div className="mb-24 flex items-center w-full  justify-center flex-row-reverse group">
             <div className="w-1/2 pl-8 text-left">
               <h3 className="text-3xl font-semibold text-white group-hover:text-[#667D77] transition-all">
-                App Availability
+                App Availability (Click on Image for scan)
               </h3>
               <p className="mt-2 text-gray-300 group-hover:text-white transition-all">
                 The Danse Macabre Audio Tour app is available for Android via a

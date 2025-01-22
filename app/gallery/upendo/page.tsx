@@ -167,14 +167,14 @@ export default function UpendoPage() {
                 a seamless and visually engaging user experience.
               </p>
             </div>
-            <div className="relative w-1/2 pl-8">
+            <div className="relative w-1/2 pl-8 ">
               <Slider {...sliderSettings}>
                 {timelineImagesWebDesign.map((image, index) => (
                   <div key={index}>
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={600}
+                      width={800}
                       height={400}
                       className="rounded-xl shadow-xl cursor-pointer"
                       onClick={() => openModal(image.src)}
@@ -204,7 +204,7 @@ export default function UpendoPage() {
                     <Image
                       src={image.src}
                       alt={image.alt}
-                      width={600}
+                      width={800}
                       height={400}
                       className="rounded-xl shadow-xl cursor-pointer"
                       onClick={() => openModal(image.src)}
