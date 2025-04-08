@@ -24,16 +24,18 @@ export default function Hero() {
         src="/imagekoen.png"
         alt="Hero background"
         fill
-        className="object-cover"
+        className="object-cover object-center md:object-[center_35%] max-w-none w-screen h-screen"
         priority
+        sizes="100vw"
+        quality={90}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
 
       <div className="relative z-10 h-full flex flex-col justify-center">
-        <div className="container mx-auto px-[60px]">
+        <div className="container mx-auto px-4 sm:px-[60px]">
           <div className="max-w-3xl">
             <p
-              className={`font-spartan text-2xl md:text-3xl font-semibold mb-2 text-left text-white/90 transition-all duration-1000 ${
+              className={`font-spartan text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-left text-white/90 transition-all duration-1000 ${
                 showFirstText
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -43,7 +45,7 @@ export default function Hero() {
             </p>
 
             <h1
-              className={`font-spartan text-6xl md:text-8xl font-bold mb-4 text-left text-white transition-all duration-1000 ${
+              className={`font-spartan text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 text-left text-white transition-all duration-1000 ${
                 showName
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -53,7 +55,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className={`font-spartan text-2xl md:text-3xl font-semibold mt-1 text-left text-white/90 transition-all duration-1000 ${
+              className={`font-spartan text-xl sm:text-2xl md:text-3xl font-semibold mt-1 text-left text-white/90 transition-all duration-1000 ${
                 showThirdText
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"

@@ -85,29 +85,29 @@ export default function About() {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-[60px]">
+    <section className="py-12 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-[60px]">
         <h2
-          className="text-[36px] font-semibold mb-8 md:mb-0 md:w-1/3 font-spartan"
+          className="text-2xl sm:text-3xl md:text-[36px] font-semibold mb-8 md:mb-0 md:w-1/3 font-spartan"
           style={{ marginBottom: "2rem" }}
         >
           About me
         </h2>
         <div
-          className="md:w-full text-[1rem] font-roboto"
+          className="md:w-full text-sm sm:text-base font-roboto"
           style={{ marginBottom: "6rem" }}
         >
-          <p className="mb-6">
+          <p className="mb-4 sm:mb-6">
             Hi, my name is Koen de Raden, and I'm an 18-year-old from Waalwijk,
             the Netherlands.
           </p>
-          <p className="mb-6">
+          <p className="mb-4 sm:mb-6">
             During my time at Dr. Mollercollege, I discovered my passion for
             ICT. Choosing Informatics as an elective in my third year turned out
             to be the perfect decision, sparking my interest in the world of
             technology and digital innovation.
           </p>
-          <p className="mb-6">
+          <p className="mb-4 sm:mb-6">
             Outside of school, I love visiting theme parks, gaming, and watching
             movies and series. For the past year and a half, I've also worked at
             the Efteling, primarily at the Pirańa attraction. This job has been
@@ -120,10 +120,10 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-12">
           <div>
-            <h4 className="text-2xl font-semibold mb-4">Coding Skills</h4>
-            <div className="flex gap-4 flex-wrap">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-4">Coding Skills</h4>
+            <div className="flex gap-3 sm:gap-4 flex-wrap">
               {codingSkills.map((logo) => (
                 <a
                   key={logo.id}
@@ -131,7 +131,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
-                  style={{ width: "60px", height: "60px" }}
+                  style={{ width: "50px", height: "50px" }}
                 >
                   <img
                     src={logo.bw}
@@ -149,8 +149,8 @@ export default function About() {
           </div>
 
           <div>
-            <h4 className="text-2xl font-semibold mb-4">Design Skills</h4>
-            <div className="flex gap-4 flex-wrap">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-4">Design Skills</h4>
+            <div className="flex gap-3 sm:gap-4 flex-wrap">
               {designSkills.map((logo) => (
                 <a
                   key={logo.id}
@@ -158,7 +158,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
-                  style={{ width: "60px", height: "60px" }}
+                  style={{ width: "50px", height: "50px" }}
                 >
                   <img
                     src={logo.bw}
@@ -176,8 +176,8 @@ export default function About() {
           </div>
 
           <div>
-            <h4 className="text-2xl font-semibold mb-4">CMS Skills</h4>
-            <div className="flex gap-4 flex-wrap">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-4">CMS Skills</h4>
+            <div className="flex gap-3 sm:gap-4 flex-wrap">
               {cmsSkills.map((logo) => (
                 <a
                   key={logo.id}
@@ -185,7 +185,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
-                  style={{ width: "60px", height: "60px" }}
+                  style={{ width: "50px", height: "50px" }}
                 >
                   <img
                     src={logo.bw}
@@ -203,10 +203,10 @@ export default function About() {
           </div>
 
           <div>
-            <h4 className="text-2xl font-semibold mb-4">
+            <h4 className="text-xl sm:text-2xl font-semibold mb-4">
               Version Control Skills
             </h4>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-3 sm:gap-4 flex-wrap">
               {versionControlSkills.map((logo) => (
                 <a
                   key={logo.id}
@@ -214,7 +214,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative"
-                  style={{ width: "60px", height: "60px" }}
+                  style={{ width: "50px", height: "50px" }}
                 >
                   <img
                     src={logo.bw}
