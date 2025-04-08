@@ -96,32 +96,46 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-black z-50">
-          <ul className="flex flex-col items-center space-y-8 p-8 pt-12">
-            <li>
+      {/* Mobile Navigation Overlay */}
+      <div 
+        className="fixed inset-0 bg-black md:hidden"
+        style={{
+          position: 'fixed',
+          top: '60px',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'black !important',
+          background: 'black !important',
+          zIndex: 9999,
+          display: isMenuOpen ? 'block' : 'none',
+          backdropFilter: 'none',
+        }}
+      >
+        <div className="absolute inset-0 bg-black" style={{backgroundColor: 'black'}}>
+          <ul className="flex flex-col items-center space-y-8 p-8 pt-12 bg-black">
+            <li className="bg-black">
               <Link href="/#gallery" passHref onClick={() => setIsMenuOpen(false)}>
                 <span className="font-spartan text-2xl text-white hover:text-white/80 transition-all duration-300 cursor-pointer">
                   Gallery
                 </span>
               </Link>
             </li>
-            <li>
+            <li className="bg-black">
               <Link href="/#about-me" passHref onClick={() => setIsMenuOpen(false)}>
                 <span className="font-spartan text-2xl text-white hover:text-white/80 transition-all duration-300 cursor-pointer">
                   About Me
                 </span>
               </Link>
             </li>
-            <li>
+            <li className="bg-black">
               <Link href="/#about-me" passHref onClick={() => setIsMenuOpen(false)}>
                 <span className="font-spartan text-2xl text-white hover:text-white/80 transition-all duration-300 cursor-pointer">
                   My Skills
                 </span>
               </Link>
             </li>
-            <li>
+            <li className="bg-black">
               <Link href="/#contact" passHref onClick={() => setIsMenuOpen(false)}>
                 <span className="font-spartan text-2xl text-white hover:text-white/80 transition-all duration-300 cursor-pointer">
                   Contact
@@ -130,7 +144,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
